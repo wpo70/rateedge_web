@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>RateEdge – How it fits</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="RateEdge-Favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body{
+      margin:0;
+      font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:#e5e7eb;
+      background:
+        radial-gradient(circle at top left,#1e293b 0,#111827 45%,#020617 100%);
+      line-height:1.5;
+    }
+    a{text-decoration:none;color:inherit;}
+
+    header{
+      position:sticky;top:0;z-index:40;
+      backdrop-filter:blur(14px);
+      background:linear-gradient(to bottom,rgba(15,23,42,.98),rgba(15,23,42,.94));
+      border-bottom:1px solid rgba(51,65,85,.9);
+    }
+    .nav-inner{
+      max-width:1100px;margin:0 auto;
+      padding:.55rem 1.1rem;
+      display:flex;align-items:center;justify-content:space-between;gap:.5rem;
+    }
+    .brand{display:flex;align-items:center;gap:.6rem;}
+    .brand-logo{height:30px;}
+    .brand-sub{
+      font-size:.7rem;color:#9ca3af;
+      text-transform:uppercase;letter-spacing:.16em;
+    }
+    nav{display:flex;align-items:center;gap:.35rem;}
+    .nav-link{
+      font-size:.82rem;padding:.38rem .8rem;
+      border-radius:999px;
+      color:#9ca3af;border:1px solid transparent;
+    }
+    .nav-link:hover{background:rgba(15,23,42,.9);color:#e5e7eb;}
+    .nav-link.active{
+      color:#2563eb;
+      background:rgba(15,23,42,.92);
+      border-color:rgba(37,99,235,.45);
+    }
+    .nav-cta{
+      border-radius:999px;
+      padding:.38rem .95rem;
+      background:linear-gradient(135deg,#2563eb,#38bdf8);
+      color:#f9fafb;font-size:.82rem;
+      border:1px solid rgba(148,163,184,.6);
+      box-shadow:0 10px 26px rgba(15,23,42,.75);
+      white-space:nowrap;
+    }
+    .nav-toggle{
+      display:none;
+      border-radius:999px;
+      border:1px solid rgba(55,65,81,.9);
+      background:rgba(15,23,42,.98);
+      width:32px;height:32px;
+      font-size:1.1rem;color:#9ca3af;
+      align-items:center;justify-content:center;
+      cursor:pointer;
+    }
+    @media(max-width:780px){
+      nav{display:none}
+      nav.open{
+        position:absolute;top:100%;left:0;right:0;
+        background:rgba(15,23,42,.99);
+        border-bottom:1px solid rgba(31,41,55,.9);
+        flex-direction:column;
+        padding:.6rem 1.1rem .8rem;
+      }
+      nav.open .nav-link,nav.open .nav-cta{
+        width:100%;text-align:left;
+      }
+      .nav-toggle{display:inline-flex}
+    }
+
+    main{
+      max-width:1100px;margin:0 auto;
+      padding:1.6rem 1.1rem 2.6rem;
+    }
+
+    .page-hero{
+      margin-bottom:1.6rem;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 12px 32px rgba(15,23,42,.6);
+      border:1px solid rgba(148,163,184,.55);
+      background:#020617;
+    }
+    .page-hero-img{
+      height:170px;
+      background:
+        linear-gradient(to top,rgba(15,23,42,.78),rgba(15,23,42,.2)),
+        url("trading-floor-strip.jpg") center/cover no-repeat;
+    }
+
+    h1{font-size:1.65rem;margin:.2rem 0 .4rem;}
+    .section-sub{
+      font-size:.9rem;color:#9ca3af;
+      margin-bottom:1.4rem;max-width:40rem;
+    }
+
+    .steps-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:.9rem;
+    }
+    @media(max-width:960px){.steps-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+    @media(max-width:640px){.steps-grid{grid-template-columns:minmax(0,1fr);}}
+
+    .step-card{
+      background:#020617;
+      border-radius:14px;
+      border:1px solid rgba(148,163,184,.55);
+      padding:.85rem;
+      box-shadow:0 8px 22px rgba(15,23,42,.6);
+      font-size:.84rem;
+    }
+    .step-label{
+      font-size:.72rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:#9ca3af;
+      margin-bottom:.1rem;
+    }
+    .step-title{
+      font-weight:600;
+      margin-bottom:.2rem;
+      color:#e5e7eb;
+    }
+    .step-text{
+      color:#9ca3af;
+      font-size:.82rem;
+    }
+
+    .arch-note{
+      margin-top:1.1rem;
+      font-size:.82rem;
+      color:#9ca3af;
+      max-width:40rem;
+    }
+
+    footer{
+      border-top:1px solid rgba(51,65,85,.9);
+      background:#020617;
+      font-size:.78rem;
+      color:#9ca3af;
+    }
+    .footer-inner{
+      max-width:1100px;margin:0 auto;
+      padding:.75rem 1.1rem .9rem;
+      display:flex;justify-content:space-between;
+      flex-wrap:wrap;gap:.5rem;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav-inner">
+    <div class="brand">
+      <img src="RateEdge-Horizontal.svg" alt="RateEdge Australia" class="brand-logo" />
+      <div class="brand-sub">Tools for Institutional Rates Desks</div>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav id="mainNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="how-it-fits.html" class="nav-link active">How it fits</a>
+      <a href="who-its-for.html" class="nav-link">Who it’s for</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+      <a href="index.html#contact" class="nav-cta">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-hero">
+    <div class="page-hero-img"></div>
+  </div>
+
+  <h1>How RateEdge fits into your stack</h1>
+  <p class="section-sub">
+    RateEdge is deliberately thin. It sits between the models and curves you already trust and the people who use them –
+    traders, quants, risk and treasury.
+  </p>
+
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-label">01</div>
+      <div class="step-title">Connect</div>
+      <p class="step-text">
+        Plug into existing curves, vol surfaces and data sources – brokers, venues or internal pricing libraries.
+        RateEdge doesn’t replace your models, it exposes them.
+      </p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-label">02</div>
+      <div class="step-title">Configure</div>
+      <p class="step-text">
+        Set conventions, calendars and product templates once and reuse them across the Swaption Pricer, RateEdge OMS
+        and the Historical Data Portal.
+      </p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-label">03</div>
+      <div class="step-title">Deliver</div>
+      <p class="step-text">
+        Provide traders, risk and treasury with clean web tools, embedded into internal portals if required.
+        Keep interaction consistent across desks and locations.
+      </p>
+    </div>
+
+    <div class="step-card">
+      <div class="step-label">04</div>
+      <div class="step-title">Scale</div>
+      <p class="step-text">
+        Add new products, instruments and reports without rebuilding infrastructure. RateEdge becomes the delivery
+        surface for additional models and data feeds.
+      </p>
+    </div>
+  </div>
+
+  <p class="arch-note">
+    Typical deployments attach RateEdge to internal curve and volatility infrastructure, with connectivity to brokers,
+    venues and risk systems. The goal is to reduce screen clutter, not add to it.
+  </p>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© <span id="year"></span> RateEdge Australia.</span>
+    <span>All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const nav = document.getElementById("mainNav");
+  const toggle = document.querySelector(".nav-toggle");
+  toggle.addEventListener("click", () => nav.classList.toggle("open"));
+</script>
+</body>
+</html>

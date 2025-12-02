@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>RateEdge – Who it’s for</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="RateEdge-Favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body{
+      margin:0;
+      font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:#e5e7eb;
+      background:
+        radial-gradient(circle at top left,#1e293b 0,#111827 45%,#020617 100%);
+      line-height:1.5;
+    }
+    a{text-decoration:none;color:inherit;}
+
+    header{
+      position:sticky;top:0;z-index:40;
+      backdrop-filter:blur(14px);
+      background:linear-gradient(to bottom,rgba(15,23,42,.98),rgba(15,23,42,.94));
+      border-bottom:1px solid rgba(51,65,85,.9);
+    }
+    .nav-inner{
+      max-width:1100px;margin:0 auto;
+      padding:.55rem 1.1rem;
+      display:flex;align-items:center;justify-content:space-between;gap:.5rem;
+    }
+    .brand{display:flex;align-items:center;gap:.6rem;}
+    .brand-logo{height:30px;}
+    .brand-sub{
+      font-size:.7rem;color:#9ca3af;
+      text-transform:uppercase;letter-spacing:.16em;
+    }
+    nav{display:flex;align-items:center;gap:.35rem;}
+    .nav-link{
+      font-size:.82rem;padding:.38rem .8rem;
+      border-radius:999px;
+      color:#9ca3af;border:1px solid transparent;
+    }
+    .nav-link:hover{background:rgba(15,23,42,.9);color:#e5e7eb;}
+    .nav-link.active{
+      color:#2563eb;
+      background:rgba(15,23,42,.92);
+      border-color:rgba(37,99,235,.45);
+    }
+    .nav-cta{
+      border-radius:999px;
+      padding:.38rem .95rem;
+      background:linear-gradient(135deg,#2563eb,#38bdf8);
+      color:#f9fafb;font-size:.82rem;
+      border:1px solid rgba(148,163,184,.6);
+      box-shadow:0 10px 26px rgba(15,23,42,.75);
+      white-space:nowrap;
+    }
+    .nav-toggle{
+      display:none;
+      border-radius:999px;
+      border:1px solid rgba(55,65,81,.9);
+      background:rgba(15,23,42,.98);
+      width:32px;height:32px;
+      font-size:1.1rem;color:#9ca3af;
+      align-items:center;justify-content:center;
+      cursor:pointer;
+    }
+    @media(max-width:780px){
+      nav{display:none}
+      nav.open{
+        position:absolute;top:100%;left:0;right:0;
+        background:rgba(15,23,42,.99);
+        border-bottom:1px solid rgba(31,41,55,.9);
+        flex-direction:column;
+        padding:.6rem 1.1rem .8rem;
+      }
+      nav.open .nav-link,nav.open .nav-cta{
+        width:100%;text-align:left;
+      }
+      .nav-toggle{display:inline-flex}
+    }
+
+    main{
+      max-width:1100px;margin:0 auto;
+      padding:1.6rem 1.1rem 2.6rem;
+    }
+
+    .page-hero{
+      margin-bottom:1.6rem;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 12px 32px rgba(15,23,42,.6);
+      border:1px solid rgba(148,163,184,.55);
+      background:#020617;
+    }
+    .page-hero-img{
+      height:210px;
+      background:
+        linear-gradient(to top,rgba(15,23,42,.78),rgba(15,23,42,.2)),
+        url("who-its-for.jpg") center/cover no-repeat;
+    }
+
+    h1{font-size:1.65rem;margin:.2rem 0 .4rem;}
+    .section-sub{
+      font-size:.9rem;color:#9ca3af;
+      margin-bottom:1.4rem;max-width:38rem;
+    }
+
+    .who-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:1rem;
+    }
+    @media(max-width:900px){.who-grid{grid-template-columns:minmax(0,1fr);}}
+
+    .who-card{
+      background:#020617;
+      border-radius:14px;
+      border:1px solid rgba(148,163,184,.55);
+      padding:.95rem;
+      box-shadow:0 8px 22px rgba(15,23,42,.6);
+      font-size:.86rem;
+    }
+    .who-title{
+      font-weight:600;
+      margin-bottom:.25rem;
+      color:#e5e7eb;
+    }
+    .who-text{
+      color:#9ca3af;
+      font-size:.84rem;
+    }
+
+    footer{
+      border-top:1px solid rgba(51,65,85,.9);
+      background:#020617;
+      font-size:.78rem;
+      color:#9ca3af;
+    }
+    .footer-inner{
+      max-width:1100px;margin:0 auto;
+      padding:.75rem 1.1rem .9rem;
+      display:flex;justify-content:space-between;
+      flex-wrap:wrap;gap:.5rem;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav-inner">
+    <div class="brand">
+      <img src="RateEdge-Horizontal.svg" alt="RateEdge Australia" class="brand-logo" />
+      <div class="brand-sub">Tools for Institutional Rates Desks</div>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav id="mainNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="how-it-fits.html" class="nav-link">How it fits</a>
+      <a href="who-its-for.html" class="nav-link active">Who it’s for</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+      <a href="index.html#contact" class="nav-cta">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-hero">
+    <div class="page-hero-img"></div>
+  </div>
+
+  <h1>Who RateEdge is built for</h1>
+  <p class="section-sub">
+    RateEdge is designed for institutional AUD interest rate desks – banks, dealers and buy-side trading operations
+    that need focused tools rather than another all-in-one platform.
+  </p>
+
+  <div class="who-grid">
+    <div class="who-card">
+      <div class="who-title">Trading &amp; Structuring</div>
+      <p class="who-text">
+        Price swaptions and structured trades quickly, share scenarios and portfolios, and keep flows aligned with
+        downstream risk and P&amp;L. RateEdge provides clean trader views without hiding the underlying curves and models.
+      </p>
+    </div>
+
+    <div class="who-card">
+      <div class="who-title">Risk &amp; Treasury</div>
+      <p class="who-text">
+        Monitor positions and flows across swaps and options, and feed consistent data into risk, ALM and liquidity
+        reporting. RateEdge focuses on delivering desk-aligned views that can be reconciled back to core systems.
+      </p>
+    </div>
+
+    <div class="who-card">
+      <div class="who-title">Quant &amp; Technology</div>
+      <p class="who-text">
+        Retain ownership of pricing models, curves and volatility surfaces while using RateEdge as a controlled delivery
+        layer. Separate the engineering work of building tools from the research work of building models.
+      </p>
+    </div>
+
+    <div class="who-card">
+      <div class="who-title">Management &amp; Compliance</div>
+      <p class="who-text">
+        Improve transparency of orders and trades, and support audit, execution and governance processes with a clear
+        record of desk activity. RateEdge OMS provides the traceability expected in modern electronic markets.
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© <span id="year"></span> RateEdge Australia.</span>
+    <span>All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const nav = document.getElementById("mainNav");
+  const toggle = document.querySelector(".nav-toggle");
+  toggle.addEventListener("click", () => nav.classList.toggle("open"));
+</script>
+</body>
+</html>

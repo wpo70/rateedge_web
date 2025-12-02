@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RateEdge - Brand Assets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1e3a5f;
+            --blue: #2563eb;
+            --blue-light: #3b82f6;
+            --red: #dc2626;
+            --red-light: #ef4444;
+            --slate: #0f172a;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-400: #94a3b8;
+            --gray-500: #64748b;
+            --gray-700: #334155;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--gray-100);
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header h1 span { color: var(--red-light); }
+        
+        .header p {
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-label {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+        
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .logo-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        
+        .logo-preview {
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 140px;
+        }
+        
+        .logo-preview.dark {
+            background: var(--slate);
+        }
+        
+        .logo-preview.checker {
+            background-image: 
+                linear-gradient(45deg, #e2e8f0 25%, transparent 25%), 
+                linear-gradient(-45deg, #e2e8f0 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #e2e8f0 75%), 
+                linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+        
+        .logo-preview svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .logo-info {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--navy);
+        }
+        
+        .logo-file {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            font-family: monospace;
+        }
+        
+        /* Color Palette */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+        }
+        
+        .color-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        
+        .color-swatch {
+            height: 80px;
+        }
+        
+        .color-info {
+            padding: 0.75rem 1rem;
+        }
+        
+        .color-name {
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--gray-700);
+        }
+        
+        .color-hex {
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: var(--gray-500);
+        }
+        
+        /* Typography */
+        .type-demo {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        
+        .type-sample {
+            margin-bottom: 1.5rem;
+        }
+        
+        .type-label {
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--gray-400);
+            margin-bottom: 0.5rem;
+        }
+        
+        .type-display {
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .type-display .rate { color: var(--navy); }
+        .type-display .edge { color: var(--red); }
+        
+        /* Usage Guidelines */
+        .usage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .usage-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        
+        .usage-card h3 {
+            font-size: 1rem;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+        }
+        
+        .usage-card ul {
+            list-style: none;
+            font-size: 0.9rem;
+        }
+        
+        .usage-card li {
+            padding: 0.25rem 0;
+        }
+        
+        .usage-card .do { color: #16a34a; }
+        .usage-card .dont { color: var(--red); }
+        
+        /* Download Section */
+        .download-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        
+        .file-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 0.75rem;
+        }
+        
+        .file-item {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background: var(--gray-100);
+            border-radius: 8px;
+            font-size: 0.85rem;
+        }
+        
+        .file-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--blue);
+            color: white;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-right: 0.75rem;
+        }
+        
+        .file-name {
+            font-weight: 500;
+            color: var(--navy);
+        }
+        
+        .file-desc {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Rate<span>Edge</span></h1>
+        <p>Brand Assets & Guidelines</p>
+    </header>
+    
+    <div class="container">
+        <!-- Primary Logos -->
+        <section>
+            <p class="section-label">01 / Primary Logos</p>
+            <h2 class="section-title">Main Logo Versions</h2>
+            
+            <div class="logo-grid">
+                <div class="logo-card">
+                    <div class="logo-preview">
+                        <svg viewBox="0 0 320 120" width="280">
+                            <defs>
+                                <linearGradient id="tg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1e3a5f"/>
+                                    <stop offset="100%" style="stop-color:#2563eb"/>
+                                </linearGradient>
+                                <linearGradient id="cg1" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#1e3a5f"/>
+                                    <stop offset="100%" style="stop-color:#3b82f6"/>
+                                </linearGradient>
+                            </defs>
+                            <g transform="translate(95, 12)">
+                                <path d="M 0 32 Q 35 28, 58 15 Q 80 2, 102 -5" fill="none" stroke="url(#cg1)" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="102" cy="-5" r="5" fill="#dc2626"/>
+                            </g>
+                            <text x="160" y="72" font-family="'Segoe UI', sans-serif" font-size="40" font-weight="600" text-anchor="middle" letter-spacing="0.5">
+                                <tspan fill="url(#tg1)">Rate</tspan><tspan fill="#dc2626">Edge</tspan>
+                            </text>
+                            <line x1="52" y1="88" x2="268" y2="88" stroke="#dc2626" stroke-width="2.5"/>
+                        </svg>
+                    </div>
+                    <div class="logo-info">
+                        <span class="logo-name">Primary Logo</span>
+                        <span class="logo-file">RateEdge-Logo-Primary.svg</span>
+                    </div>
+                </div>
+                
+                <div class="logo-card">
+                    <div class="logo-preview dark">
+                        <svg viewBox="0 0 320 120" width="280">
+                            <defs>
+                                <linearGradient id="cgd" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#475569"/>
+                                    <stop offset="100%" style="stop-color:#cbd5e1"/>
+                                </linearGradient>
+                            </defs>
+                            <g transform="translate(95, 12)">
+                                <path d="M 0 32 Q 35 28, 58 15 Q 80 2, 102 -5" fill="none" stroke="url(#cgd)" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="102" cy="-5" r="5" fill="#ef4444"/>
+                            </g>
+                            <text x="160" y="72" font-family="'Segoe UI', sans-serif" font-size="40" font-weight="600" text-anchor="middle" letter-spacing="0.5">
+                                <tspan fill="#f1f5f9">Rate</tspan><tspan fill="#ef4444">Edge</tspan>
+                            </text>
+                            <line x1="52" y1="88" x2="268" y2="88" stroke="#475569" stroke-width="2.5"/>
+                        </svg>
+                    </div>
+                    <div class="logo-info">
+                        <span class="logo-name">Dark Version</span>
+                        <span class="logo-file">RateEdge-Logo-Dark.svg</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Horizontal Lockups -->
+        <section>
+            <p class="section-label">02 / Horizontal Lockups</p>
+            <h2 class="section-title">Wide Format Versions</h2>
+            
+            <div class="logo-grid">
+                <div class="logo-card">
+                    <div class="logo-preview">
+                        <svg viewBox="0 0 380 70" width="340">
+                            <defs>
+                                <linearGradient id="tg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1e3a5f"/>
+                                    <stop offset="100%" style="stop-color:#2563eb"/>
+                                </linearGradient>
+                                <linearGradient id="cg2" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#1e3a5f"/>
+                                    <stop offset="100%" style="stop-color:#3b82f6"/>
+                                </linearGradient>
+                            </defs>
+                            <g transform="translate(10, 10)">
+                                <path d="M 5 38 Q 18 34, 28 22 Q 38 12, 48 6" fill="none" stroke="url(#cg2)" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="48" cy="6" r="4.5" fill="#dc2626"/>
+                                <line x1="5" y1="48" x2="48" y2="48" stroke="#dc2626" stroke-width="2.5"/>
+                            </g>
+                            <text x="85" y="45" font-family="'Segoe UI', sans-serif" font-size="36" font-weight="600">
+                                <tspan fill="url(#tg2)">Rate</tspan><tspan fill="#dc2626">Edge</tspan>
+                            </text>
+                            <text x="270" y="45" font-family="'Segoe UI', sans-serif" font-size="12" fill="#64748b">(Aust)</text>
+                        </svg>
+                    </div>
+                    <div class="logo-info">
+                        <span class="logo-name">Horizontal</span>
+                        <span class="logo-file">RateEdge-Horizontal.svg</span>
+                    </div>
+                </div>
+                
+                <div class="logo-card">
+                    <div class="logo-preview dark">
+                        <svg viewBox="0 0 380 70" width="340">
+                            <defs>
+                                <linearGradient id="cgd2" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#475569"/>
+                                    <stop offset="100%" style="stop-color:#cbd5e1"/>
+                                </linearGradient>
+                            </defs>
+                            <g transform="translate(10, 10)">
+                                <path d="M 5 38 Q 18 34, 28 22 Q 38 12, 48 6" fill="none" stroke="url(#cgd2)" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="48" cy="6" r="4.5" fill="#ef4444"/>
+                                <line x1="5" y1="48" x2="48" y2="48" stroke="#475569" stroke-width="2.5"/>
+                            </g>
+                            <text x="85" y="45" font-family="'Segoe UI', sans-serif" font-size="36" font-weight="600">
+                                <tspan fill="#f1f5f9">Rate</tspan><tspan fill="#ef4444">Edge</tspan>
+                            </text>
+                            <text x="270" y="45" font-family="'Segoe UI', sans-serif" font-size="12" fill="#64748b">(Aust)</text>
+                        </svg>
+                    </div>
+                    <div class="logo-info">
+                        <span class="logo-name">Horizontal Dark</span>
+                        <span class="logo-file">RateEdge-Horizontal-Dark.svg</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Icons -->
+        <section>
+            <p class="section-label">03 / Icon Marks</p>
+            <h2 class="section-title">App Icons & Favicons</h2>
+            
+            <div class="logo-grid">
+                <div class="logo-card">
+                    <div class="logo-preview">
+                        <svg viewBox="0 0 80 80" width="80">
+                            <defs>
+                                <linearGradient id="cgi" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#1e3a5f"/>
+                                    <stop offset="100%" style="stop-color:#3b82f6"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M 10 55 Q 30 48, 45 32 Q 58 18, 70 10" fill="none" stroke="url(#cgi)" stroke-width="5" stroke-linecap="round"/>
+                            <circle cx="70" cy="10" r="7" fill="#dc2626"/>
+                            <line x1="10" y1="70" x2="70" y2="70" stroke="#dc2626" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <div class="logo-info">
+                        <span class="logo-name">Icon Mark</span>
+                        <span class="logo-file">RateEdge-Icon.svg</span>
+                    </div>
+                </div>
+                
+                <div class="logo-card">
+                    <div class="logo-preview dark">
+                        <svg viewBox="0 0 80 80" width="80">
+                            <defs>
+                                <linearGradient id="cgid" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#475569"/>
+                                    <stop offset="100%" style="stop-color:#cbd5e1"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M 10 55 Q 30 48, 45 32 Q 58 18, 70 10" fill="none" stroke="url(#cgid)" stroke-width="5" stroke-linecap="round"/>
+                            <circle cx="70" cy="10" r="7" fill="#ef4444"/>
+                            <line x1="10" y1="70" x2="70" y2="70" stroke="#475569" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <div class="logo-info">
+                        <span class="logo-name">Icon Dark</span>
+                        <span class="logo-file">RateEdge-Icon-Dark.svg</span>
+                    </div>
+                </div>
+                
+                <div class="logo-card">
+                    <div class="logo-preview">
+                        <svg viewBox="0 0 64 64" width="64">
+                            <defs>
+                                <linearGradient id="cgf" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#1e3a5f"/>
+                                    <stop offset="100%" style="stop-color:#3b82f6"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="64" height="64" fill="#ffffff" rx="12"/>
+                            <path d="M 12 42 Q 26 36, 36 24 Q 46 14, 52 8" fill="none" stroke="url(#cgf)" stroke-width="5" stroke-linecap="round"/>
+                            <circle cx="52" cy="8" r="6" fill="#dc2626"/>
+                            <line x1="12" y1="54" x2="52" y2="54" stroke="#dc2626" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <div class="logo-info">
+                        <span class="logo-name">Favicon</span>
+                        <span class="logo-file">RateEdge-Favicon.svg</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Monochrome -->
+        <section>
+            <p class="section-label">04 / Monochrome</p>
+            <h2 class="section-title">Single Color Versions</h2>
+            
+            <div class="logo-grid">
+                <div class="logo-card">
+                    <div class="logo-preview">
+                        <svg viewBox="0 0 320 120" width="260">
+                            <g transform="translate(95, 12)">
+                                <path d="M 0 32 Q 35 28, 58 15 Q 80 2, 102 -5" fill="none" stroke="#1e3a5f" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="102" cy="-5" r="5" fill="#1e3a5f"/>
+                            </g>
+                            <text x="160" y="72" font-family="'Segoe UI', sans-serif" font-size="40" font-weight="600" text-anchor="middle" fill="#1e3a5f">RateEdge</text>
+                            <line x1="52" y1="88" x2="268" y2="88" stroke="#1e3a5f" stroke-width="2.5"/>
+                        </svg>
+                    </div>
+                    <div class="logo-info">
+                        <span class="logo-name">Navy Mono</span>
+                        <span class="logo-file">RateEdge-Mono-Navy.svg</span>
+                    </div>
+                </div>
+                
+                <div class="logo-card">
+                    <div class="logo-preview checker">
+                        <svg viewBox="0 0 320 120" width="260">
+                            <g transform="translate(95, 12)">
+                                <path d="M 0 32 Q 35 28, 58 15 Q 80 2, 102 -5" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="102" cy="-5" r="5" fill="#000000"/>
+                            </g>
+                            <text x="160" y="72" font-family="'Segoe UI', sans-serif" font-size="40" font-weight="600" text-anchor="middle" fill="#000000">RateEdge</text>
+                            <line x1="52" y1="88" x2="268" y2="88" stroke="#000000" stroke-width="2.5"/>
+                        </svg>
+                    </div>
+                    <div class="logo-info">
+                        <span class="logo-name">Black Mono</span>
+                        <span class="logo-file">RateEdge-Mono-Black.svg</span>
+                    </div>
+                </div>
+                
+                <div class="logo-card">
+                    <div class="logo-preview dark">
+                        <svg viewBox="0 0 320 120" width="260">
+                            <g transform="translate(95, 12)">
+                                <path d="M 0 32 Q 35 28, 58 15 Q 80 2, 102 -5" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="102" cy="-5" r="5" fill="#ffffff"/>
+                            </g>
+                            <text x="160" y="72" font-family="'Segoe UI', sans-serif" font-size="40" font-weight="600" text-anchor="middle" fill="#ffffff">RateEdge</text>
+                            <line x1="52" y1="88" x2="268" y2="88" stroke="#ffffff" stroke-width="2.5"/>
+                        </svg>
+                    </div>
+                    <div class="logo-info">
+                        <span class="logo-name">White Mono</span>
+                        <span class="logo-file">RateEdge-Mono-White.svg</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Color Palette -->
+        <section>
+            <p class="section-label">05 / Color Palette</p>
+            <h2 class="section-title">Brand Colors</h2>
+            
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #1e3a5f;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Navy</div>
+                        <div class="color-hex">#1e3a5f</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #2563eb;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Blue</div>
+                        <div class="color-hex">#2563eb</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #3b82f6;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Blue Light</div>
+                        <div class="color-hex">#3b82f6</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #dc2626;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Red</div>
+                        <div class="color-hex">#dc2626</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #ef4444;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Red Light</div>
+                        <div class="color-hex">#ef4444</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #0f172a;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Slate Dark</div>
+                        <div class="color-hex">#0f172a</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Typography -->
+        <section>
+            <p class="section-label">06 / Typography</p>
+            <h2 class="section-title">Type System</h2>
+            
+            <div class="type-demo">
+                <div class="type-sample">
+                    <div class="type-label">Primary Wordmark</div>
+                    <div class="type-display">
+                        <span class="rate">Rate</span><span class="edge">Edge</span>
+                    </div>
+                </div>
+                <div class="type-sample">
+                    <div class="type-label">Typeface</div>
+                    <p style="font-size: 1.1rem; color: #334155;">
+                        <strong>Primary:</strong> Segoe UI Semibold / Helvetica Neue Bold<br>
+                        <strong>Fallback:</strong> Arial, system sans-serif<br>
+                        <strong>Weight:</strong> 600 (Semibold)
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Usage -->
+        <section>
+            <p class="section-label">07 / Usage Guidelines</p>
+            <h2 class="section-title">Do's and Don'ts</h2>
+            
+            <div class="usage-grid">
+                <div class="usage-card">
+                    <h3>✓ Do</h3>
+                    <ul>
+                        <li class="do">✓ Use approved color combinations</li>
+                        <li class="do">✓ Maintain clear space around logo</li>
+                        <li class="do">✓ Use on solid backgrounds</li>
+                        <li class="do">✓ Scale proportionally</li>
+                        <li class="do">✓ Use dark version on dark backgrounds</li>
+                    </ul>
+                </div>
+                <div class="usage-card">
+                    <h3>✗ Don't</h3>
+                    <ul>
+                        <li class="dont">✗ Change the colors</li>
+                        <li class="dont">✗ Distort or stretch</li>
+                        <li class="dont">✗ Add shadows or effects</li>
+                        <li class="dont">✗ Rotate the logo</li>
+                        <li class="dont">✗ Use on busy backgrounds</li>
+                    </ul>
+                </div>
+                <div class="usage-card">
+                    <h3>Minimum Sizes</h3>
+                    <ul>
+                        <li>Digital: 120px width minimum</li>
+                        <li>Print: 30mm width minimum</li>
+                        <li>Icon: 24px minimum</li>
+                        <li>Favicon: 16px minimum</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- File List -->
+        <section>
+            <p class="section-label">08 / File Package</p>
+            <h2 class="section-title">Included Files</h2>
+            
+            <div class="download-section">
+                <div class="file-list">
+                    <div class="file-item">
+                        <div class="file-icon">SVG</div>
+                        <div>
+                            <div class="file-name">RateEdge-Logo-Primary.svg</div>
+                            <div class="file-desc">Main logo, light backgrounds</div>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="file-icon">SVG</div>
+                        <div>
+                            <div class="file-name">RateEdge-Logo-Dark.svg</div>
+                            <div class="file-desc">For dark backgrounds (no bg)</div>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="file-icon">SVG</div>
+                        <div>
+                            <div class="file-name">RateEdge-Logo-Dark-BG.svg</div>
+                            <div class="file-desc">With dark background included</div>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="file-icon">SVG</div>
+                        <div>
+                            <div class="file-name">RateEdge-Logo-Australia.svg</div>
+                            <div class="file-desc">With Australia tagline</div>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="file-icon">SVG</div>
+                        <div>
+                            <div class="file-name">RateEdge-Horizontal.svg</div>
+                            <div class="file-desc">Wide format, light</div>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="file-icon">SVG</div>
+                        <div>
+                            <div class="file-name">RateEdge-Horizontal-Dark.svg</div>
+                            <div class="file-desc">Wide format, dark</div>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="file-icon">SVG</div>
+                        <div>
+                            <div class="file-name">RateEdge-Icon.svg</div>
+                            <div class="file-desc">Icon mark, light</div>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="file-icon">SVG</div>
+                        <div>
+                            <div class="file-name">RateEdge-Icon-Dark.svg</div>
+                            <div class="file-desc">Icon mark, dark</div>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="file-icon">SVG</div>
+                        <div>
+                            <div class="file-name">RateEdge-Favicon.svg</div>
+                            <div class="file-desc">App icon / favicon</div>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="file-icon">SVG</div>
+                        <div>
+                            <div class="file-name">RateEdge-Mono-Navy.svg</div>
+                            <div class="file-desc">Single color navy</div>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="file-icon">SVG</div>
+                        <div>
+                            <div class="file-name">RateEdge-Mono-Black.svg</div>
+                            <div class="file-desc">Single color black</div>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="file-icon">SVG</div>
+                        <div>
+                            <div class="file-name">RateEdge-Mono-White.svg</div>
+                            <div class="file-desc">Single color white</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
