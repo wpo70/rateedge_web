@@ -123,7 +123,9 @@ Then open your browser and visit: `http://localhost:8000`
 **"Port already in use"**
 - Another program is using port 8000
 - Try a different port: `python3 -m http.server 8080`
-- Or stop the other server: `pkill -f http.server` (Mac/Linux) or restart your computer
+- Or find and stop the process using the port:
+  - Mac/Linux: `lsof -ti:8000 | xargs kill`
+  - Windows: `netstat -ano | findstr :8000` (note the PID), then `taskkill /PID <number> /F`
 
 **Browser shows "Unable to connect" or "Can't reach this page"**
 - Make sure the server is still running in the terminal/command prompt

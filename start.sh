@@ -14,8 +14,16 @@ fi
 
 # Function to check if a port is available
 check_port() {
-    nc -z localhost $1 2>/dev/null
-    return $?
+    if command -v nc &> /dev/null; then
+        nc -z localhost $1 2>/dev/null
+        return $?
+    elif command -v lsof &> /dev/null; then
+        lsof -i :$1 >/dev/null 2>&1
+        return $?
+    else
+        # Skip check if neither command is available
+        return 1
+    fi
 }
 
 PORT=8000
