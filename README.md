@@ -7,7 +7,7 @@ This repository contains the RateEdge Australia website - a static HTML website 
 ### Easiest Method: Use the Startup Scripts
 
 **Windows:**
-```bash
+```cmd
 start.bat
 ```
 Double-click `start.bat` or run it from Command Prompt. It will automatically start a local web server or open the file in your browser.
