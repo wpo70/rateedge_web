@@ -23,16 +23,27 @@ if %ERRORLEVEL% EQU 0 (
     exit /b 0
 )
 
-REM Try Python
+REM Try Python (check version to use correct module)
 where python >nul 2>nul
 if %ERRORLEVEL% EQU 0 (
-    echo Found Python
-    echo Starting server at http://localhost:8000
-    echo.
-    echo Press Ctrl+C to stop the server
-    echo.
-    python -m SimpleHTTPServer 8000
-    exit /b 0
+    python --version 2>&1 | findstr /C:"Python 2" >nul
+    if %ERRORLEVEL% EQU 0 (
+        echo Found Python 2
+        echo Starting server at http://localhost:8000
+        echo.
+        echo Press Ctrl+C to stop the server
+        echo.
+        python -m SimpleHTTPServer 8000
+        exit /b 0
+    ) else (
+        echo Found Python (trying as Python 3)
+        echo Starting server at http://localhost:8000
+        echo.
+        echo Press Ctrl+C to stop the server
+        echo.
+        python -m http.server 8000
+        exit /b 0
+    )
 )
 
 REM Try PHP

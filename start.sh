@@ -12,13 +12,13 @@ if [ ! -f "index.html" ]; then
     exit 1
 fi
 
-# Function to check if a port is available
+# Function to check if a port is in use (returns 0 if in use, 1 if available)
 check_port() {
-    if command -v nc &> /dev/null; then
-        nc -z localhost $1 2>/dev/null
-        return $?
-    elif command -v lsof &> /dev/null; then
+    if command -v lsof &> /dev/null; then
         lsof -i :$1 >/dev/null 2>&1
+        return $?
+    elif command -v nc &> /dev/null; then
+        nc -z localhost $1 2>/dev/null
         return $?
     else
         # Skip check if neither command is available
@@ -33,7 +33,9 @@ if check_port $PORT; then
     echo "⚠️  Port $PORT is already in use. The website might already be running."
     echo "   Visit: http://localhost:$PORT"
     echo ""
-    echo "   To stop any running server, run: pkill -f 'http.server|http-server|php.*localhost'"
+    echo "   To find what's using the port:"
+    echo "   - Mac/Linux: lsof -i :$PORT"
+    echo "   - Or try a different port: python3 -m http.server 8080"
     exit 1
 fi
 
