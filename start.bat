@@ -31,7 +31,7 @@ if %ERRORLEVEL% EQU 0 (
     echo.
     echo Press Ctrl+C to stop the server
     echo.
-    python -m http.server 8000
+    python -m SimpleHTTPServer 8000
     exit /b 0
 )
 
@@ -51,11 +51,11 @@ REM Try http-server
 where http-server >nul 2>nul
 if %ERRORLEVEL% EQU 0 (
     echo Found http-server (Node.js)
-    echo Starting server at http://localhost:8080
+    echo Starting server at http://localhost:8000
     echo.
     echo Press Ctrl+C to stop the server
     echo.
-    http-server
+    http-server -p 8000
     exit /b 0
 )
 
