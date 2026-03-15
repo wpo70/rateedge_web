@@ -5,11 +5,8 @@
   <title>RateEdge Australia – Tools for Institutional Rates Desks</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="RateEdge Australia – Swap, Swaption & Data Infrastructure for institutional interest rate desks.">
+        content="RateEdge Australia – Swap, Swaption & Data Infrastructure for institutional AUD interest rate desks.">
   <link rel="icon" type="image/svg+xml" href="RateEdge-Favicon.svg" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#1e3a5f" />
 
   <!-- Inter: clean institutional font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,8 +22,8 @@
       --border-strong: #334155;
       --text-main: #e5e7eb;
       --text-muted: #9ca3af;
-      --accent: #dc2626;
-      --accent-alt: #ef4444;
+      --accent: #2563eb;
+      --accent-alt: #38bdf8;
       --radius-lg: 18px;
       --radius-md: 14px;
     }
@@ -79,7 +76,7 @@
     }
 
     .brand-logo {
-      height: 70px;
+      height: 30px;
       display: block;
     }
 
@@ -121,14 +118,9 @@
       background: linear-gradient(135deg, var(--accent), var(--accent-alt));
       color: #f9fafb;
       font-size: 0.82rem;
-      border: 1px solid rgba(220, 38, 38, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.6);
       box-shadow: 0 10px 26px rgba(15, 23, 42, 0.75);
       white-space: nowrap;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .nav-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.85);
     }
 
     .nav-toggle {
@@ -148,14 +140,12 @@
     @media (max-width: 780px) {
       nav { display: none; }
       nav.open {
-        display: flex;
         position: absolute;
         top: 100%; left: 0; right: 0;
         background: rgba(15, 23, 42, 0.99);
         border-bottom: 1px solid rgba(31, 41, 55, 0.9);
         flex-direction: column;
         padding: 0.6rem 1.1rem 0.8rem;
-        z-index: 50;
       }
       nav.open .nav-link, nav.open .nav-cta {
         width: 100%;
@@ -257,17 +247,9 @@
     }
 
     .btn-secondary {
-      background: linear-gradient(135deg, #3b82f6, #60a5fa);
-      border-color: transparent;
-      color: #ffffff;
-    }
-
-    .btn-secondary:hover {
-      background: linear-gradient(135deg, #2563eb, #3b82f6);
-      border-color: transparent;
-      color: #ffffff;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+      background: rgba(15, 23, 42, 0.96);
+      border-color: rgba(148, 163, 184, 0.55);
+      color: var(--text-muted);
     }
 
     .btn span.chevron { font-size: 0.9rem; opacity: 0.8; }
@@ -320,7 +302,7 @@
 
     .teaser-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
     }
 
@@ -334,12 +316,6 @@
       border: 1px solid rgba(148, 163, 184, 0.55);
       padding: 0.95rem;
       box-shadow: 0 8px 22px rgba(15, 23, 42, 0.6);
-      transition: transform .2s, box-shadow .2s, border-color .2s;
-    }
-    .teaser-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.7);
-      border-color: rgba(148, 163, 184, 0.75);
     }
 
     .teaser-label {
@@ -440,7 +416,7 @@
   <header>
     <div class="nav-inner">
       <div class="brand">
-        <img src="RateEdge-Logo-Dark.svg" alt="RateEdge Australia" class="brand-logo" />
+        <img src="RateEdge-Horizontal.svg" alt="RateEdge Australia" class="brand-logo" />
         <div class="brand-sub">Tools for Institutional Rates Desks</div>
       </div>
 
@@ -450,11 +426,10 @@
         <a href="index.html" class="nav-link active">Home</a>
         <a href="https://rateedge.trade" class="nav-link" target="_blank" rel="noopener">OMS</a>
         <a href="https://rateedge.com.au" class="nav-link" target="_blank" rel="noopener">Data</a>
-        <a href="products.html" class="nav-link" style="white-space: nowrap;">Pricing Tools</a>
-        <a href="how-it-fits.html" class="nav-link">Integration</a>
-        <a href="who-its-for.html" class="nav-link">Clients</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="how-it-fits.html" class="nav-link">How it fits</a>
+        <a href="who-its-for.html" class="nav-link">Who it’s for</a>
         <a href="#contact" class="nav-link">Contact</a>
-        <a href="https://rateedge-auth.azurewebsites.net/admin.html" class="nav-link" target="_blank" rel="noopener">Admin</a>
         <a href="#contact" class="nav-cta">Request a demo</a>
       </nav>
     </div>
@@ -465,12 +440,12 @@
       <div>
         <div class="hero-eyebrow">
           <span class="hero-dot"></span>
-          Interest Rate Technology
+          AUD Interest Rate Technology
         </div>
         <h1 class="hero-title">Tools for Institutional Rates Desks</h1>
         <h2 class="hero-subtitle">Swap, Swaption &amp; Data Infrastructure without a monolithic platform.</h2>
         <p class="hero-tagline">
-          RateEdge delivers focused web tools for interest rate markets – pricing, OMS and data – sitting cleanly
+          RateEdge delivers focused web tools for AUD interest rate markets – pricing, OMS and data – sitting cleanly
           on top of the curves and models you already trust.
         </p>
 
@@ -496,7 +471,7 @@
         <div class="hero-right-overlay">
           <div>
             <span class="label">Snapshot</span><br>
-            Swaption &amp; Swap OMS tools
+            AUD Swaption &amp; Swap OMS tools
           </div>
           <div>
             <span class="label">Coverage</span><br>
@@ -509,21 +484,11 @@
     <section>
       <div class="teaser-grid">
         <div class="teaser-card">
-          <div class="teaser-label">Pricing</div>
-          <div class="teaser-title">Interest Rate Derivative Pricing</div>
+          <div class="teaser-label">Execution & Pricing</div>
+          <div class="teaser-title">RateEdge OMS &amp; Swaption Pricer</div>
           <p class="teaser-text">
-            Affordable pricing tools for IRS, Swaptions, Caps & Floors and Exotics – professional-grade analytics without enterprise platform costs.
-          </p>
-          <a class="teaser-link" href="products.html">
-            View pricing tools <span>›</span>
-          </a>
-        </div>
-
-        <div class="teaser-card">
-          <div class="teaser-label">Execution</div>
-          <div class="teaser-title">RateEdge OMS</div>
-          <p class="teaser-text">
-            Order and execution management for swaps, swaptions, caps and floors – capture orders, track fills and maintain a clean audit trail.
+            Ticket-based swaption pricing and an OMS for swaps, swaptions, caps and floors – delivered as a clean
+            institutional web tool.
           </p>
           <a class="teaser-link" href="https://rateedge.trade" target="_blank" rel="noopener">
             Go to OMS <span>›</span>
@@ -534,7 +499,7 @@
           <div class="teaser-label">Data</div>
           <div class="teaser-title">Historical Data Portal</div>
           <p class="teaser-text">
-            Curated Multi Currency rates and volatility history structured for pricing, calibration and reporting, aligned to how
+            Curated AUD rates and volatility history structured for pricing, calibration and reporting, aligned to how
             your desk actually trades.
           </p>
           <a class="teaser-link" href="https://rateedge.com.au" target="_blank" rel="noopener">
@@ -544,7 +509,7 @@
 
         <div class="teaser-card">
           <div class="teaser-label">Desks</div>
-          <div class="teaser-title">Clients</div>
+          <div class="teaser-title">Who it’s built for</div>
           <p class="teaser-text">
             Trading, structuring, risk, treasury and management – designed for institutional rates desks with real flows.
           </p>
@@ -558,14 +523,14 @@
     <section id="contact">
       <div class="cta-panel">
         <div class="cta-inner">
-          <div class="cta-title">Talk to us about your rates workflow</div>
+          <div class="cta-title">Talk to us about your AUD rates workflow</div>
           <p class="cta-text">
             Whether you’re looking for a standalone swaption pricer, an OMS for swaps and options, or a data portal
             for risk and quant teams, we start with your workflow and build around the way your desk already trades.
           </p>
           <p class="cta-email">
             For institutional enquiries or to request a demo:
-            <a href="/cdn-cgi/l/email-protection#c5acaba3aa85b7a4b1a0a0a1a2a0eba4b0"><span class="__cf_email__" data-cfemail="5d34333b321d2f3c293838393a38733c28">[email&#160;protected]</span></a>
+            <a href="mailto:info@rateedge.au">info@rateedge.au</a>
           </p>
         </div>
       </div>
@@ -580,7 +545,7 @@
   </footer>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   document.getElementById("year").textContent = new Date().getFullYear();
   const nav = document.getElementById("mainNav");
   const toggle = document.querySelector(".nav-toggle");
